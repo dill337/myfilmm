@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyFilm</title>
+</head>
+
+<body>
+  <h1>MyFilm</h1>
+  <p>Where users can learn about my favorite movies</p>
+  <br>
+  <p>The following table describes the endpoints for the website</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>URL</th>
+        <th>HTTP Method</th>
+        <th>Request Body Data Format</th>
+        <th>Response Body Data Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Display all movies</td>
+        <td>/movies</td>
+        <td>GET</td>
+        <td>none</td>
+        <td>JSON object of all movies</td>
+      </tr>
+      <tr>
+        <td>Display information of a specific movie</td>
+        <td>/movies:title</td>
+        <td>GET</td>
+        <td>none</td>
+        <td>JSON object of movie data- title, director, genre</td>
+      </tr>
+      <tr>
+        <td>Describe a chosen genre</td>
+        <td>/genre/:name</td>
+        <td>GET</td>
+        <td>none</td>
+        <td>JSON object containing description of chosen genre</td>
+      </tr>
+      <tr>
+        <td>Display director bio</td>
+        <td>/director/:name</td>
+        <td>GET</td>
+        <td>none</td>
+        <td>JSON object of name, birth year, nationality, and death year of director</td>
+      </tr>
+      <tr>
+        <td>New user register</td>
+        <td>/users</td>
+        <td>POST</td>
+        <td>JSON object with Username, password, email, and DOB</td>
+        <td>JSON object displaying all of the information just added</td>
+      </tr>
+      <tr>
+        <td>User updates their profile</td>
+        <td>/users/:username/:password/:email/:dob</td>
+        <td>PUT</td>
+        <td>None</td>
+        <td>Message of confirmation that it was updated</td>
+      </tr>
+      <tr>
+        <td>User views their favorite movies</td>
+        <td>/users/:username/favorites</td>
+        <td>GET</td>
+        <td>none</td>
+        <td>JSON object of their favorite movies</td>
+      </tr>
+      <tr>
+        <td>User adds a movie to their list of favorites</td>
+        <td>/users/:username/favorites/:title</td>
+        <td>POST</td>
+        <td>none</td>
+        <td>Message confirming the movie was added</td>
+      </tr>
+      <tr>
+        <td>User can delete a movie from their favorite list</td>
+        <td>/users/:username/favorites/:title</td>
+        <td>DELETE</td>
+        <td>None</td>
+        <td>Message confirming the movie was removed</td>
+      </tr>
+      <tr>
+        <td>User can deregister</td>
+        <td>/users/:username</td>
+        <td>DELETE</td>
+        <td>None</td>
+        <td>Messsage confirming they are removed</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
