@@ -6,15 +6,19 @@ const app = express();
 const mongoose = require('mongoose');
 const Models = require('./models.js');
 
-const { check, validationRequest, validationResult } = require('express-validator')
 
 const passport = require('passport');
 require('./passport');
+const { check, validationRequest, validationResult } = require('express-validator')
 
 const Movies = Models.Movie;
 const Users = Models.User;
 
-mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// mongoose.connect('mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect('CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.use(express.static('public'));
