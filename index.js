@@ -16,9 +16,9 @@ const Users = Models.User;
 
 // mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect('mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// mongoose.connect('CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.use(express.static('public'));
