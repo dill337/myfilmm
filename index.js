@@ -6,7 +6,6 @@ const app = express();
 const mongoose = require('mongoose');
 const Models = require('./models.js');
 
-
 const passport = require('passport');
 require('./passport');
 const { check, validationRequest, validationResult } = require('express-validator')
@@ -28,7 +27,19 @@ app.use(bodyParser.json());
 let auth = require('./auth')(app);
 
 const cors = require('cors');
-app.use(cors());
+
+let allowedOrigins = ['http://localhost:8080'];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      let message = 'The CORs policy for this application doesn\'t allow acces from origin ' + origin;
+      return callback(new Error(message), false);
+    }
+    return callback(null, true);
+  }
+}));
 
 
 
@@ -118,13 +129,14 @@ app.get('/users/:Username', passport.authenticate('jwt', { session: false }), (r
 app.post('/users',
   //validation logic here for request 
   // can use a chain of methods like .not().isEmpty() or isLength({min: 5})
-  [check('Username', 'Username is required').isLength({ min: 5 }),
-  check('Username', 'Username contains non alphanumeric characters - not allowed').isAlphanumeric(),
-  check('Password', 'Password is required').not().isEmpty(),
-  check('Email', 'Email does not appear to be valid').isEmail()
+  [
+    check('Username', 'Username is required').isLength({ min: 5 }),
+    check('Username', 'Username contains non alphanumeric characters - not allowed').isAlphanumeric(),
+    check('Password', 'Password is required').not().isEmpty(),
+    check('Email', 'Email does not appear to be valid').isEmail()
   ],
   (req, res) => {
-    //check for validation object for errors 
+    //check the validation object for errors 
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
@@ -133,7 +145,7 @@ app.post('/users',
     Users.findOne({ Username: req.body.Username })
       .then((user) => {
         if (user) {
-          return res.status(400).send(req.body.Username + 'already exists');
+          return res.status(400).send(req.body.Username + ' already exists');
         } else {
           Users
             .create({
@@ -146,7 +158,7 @@ app.post('/users',
             .catch((error) => {
               console.error(error);
               res.status(500).send('Error: ' + error);
-            })
+            });
         }
       })
       .catch((error) => {
