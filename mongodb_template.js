@@ -1,21 +1,22 @@
-// let movie16 = {
-//   Title: "Snatch",
-//   Description: "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
-//   Genre: {
-//     Name: ["Action-Drama"],
-//     Description: "Action-Drama Films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature, with suspenseful action packed scenes."
-//   },
-//   Director: {
-//     Name: "Guy Ritchide",
-//     Bio: "Guy Ritchie is an English film director.",
-//     Birth: "1968",
-//   },
-//   Actors: ["Brad Pitt", "Jason Statham", "Benicio Del Toro", "Dennis Farina"],
-//   ImagePath: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT7Hi3ThNLimq1gdEB45DoMdXdb73Mkg5RlFJ5l2D8dfy9JsaiK",
-//   Featured: false
-// }
+let movie22 = {
+  Title: "Kiss Kiss Bang Bang",
+  Description: "A murder mystery brings together a private eye, a struggling actress, and a thief masquerading as an actor.",
+  Genre: {
+    Name: ["Comedy"],
+    Description: "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect"
+  },
+  Director: {
+    Name: "Shane Black",
+    Bio: "Shane Black is an American film director.",
+    Birth: "1961",
+  },
+  Year: "2010",
+  Actors: ["Robert Downey Junior", "Val Kilmer", "Michelle Monaghan"],
+  ImagePath: "https://m.media-amazon.com/images/M/MV5BMTY5NDExMDA3M15BMl5BanBnXkFtZTYwNTc2MzA3._V1_UX182_CR0,0,182,268_AL_.jpg",
+  Featured: false
+}
 
-// db.movies.insertOne(movie16)
+db.movies.insertOne(movie22)
 // /*
 // Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.
 // */
@@ -41,3 +42,13 @@
 //   {$and:[{ "Genre.Name": "Comedy" }, { "Director.Name": "Farrelly Brothers"}]}).pretty()
 
 //   _id" : ObjectId("60136f938db5020db938173b")
+
+
+// mongoimport --uri mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection movies --type JSON --file ./movies.json
+// mongoimport --uri mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection movies --type json --file ./movies.json
+
+// mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/myFilmDB" --username dill337
+// mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/<dbname>" --username dill337
+
+// mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority
+// mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority
