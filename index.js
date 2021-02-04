@@ -5,6 +5,8 @@ morgan = require('morgan');
 const app = express();
 const mongoose = require('mongoose');
 const Models = require('./models.js');
+require('dotenv').config({ path: '.env' })
+
 
 const passport = require('passport');
 require('./passport');
