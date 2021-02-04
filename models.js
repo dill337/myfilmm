@@ -34,7 +34,8 @@ userSchema.methods.validatePassword = function (password) {
 
 let genreSchema = mongoose.Schema({
   Name: { type: String, required: true },
-  Description: { type: String, required: true }
+  Description: { type: String, required: true },
+  GenreMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 });
 
 let directorSchema = mongoose.Schema({
@@ -42,13 +43,15 @@ let directorSchema = mongoose.Schema({
   Bio: { type: String, required: true },
   Birth: { type: String },
   Death: { type: String },
+  DirectedMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 })
 
 let actorSchema = mongoose.Schema({
   Name: { type: String, required: true },
   Bio: { type: String, required: true },
   Birth: { type: String },
-  Death: { type: String }
+  Death: { type: String },
+  ActedMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 })
 
 let Movie = mongoose.model('Movie', movieSchema);

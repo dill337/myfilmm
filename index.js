@@ -14,6 +14,9 @@ const { check, validationRequest, validationResult } = require('express-validato
 
 const Movies = Models.Movie;
 const Users = Models.User;
+const Genres = Models.Genre;
+const Directors = Models.Director;
+const Actors = Models.Actor;
 
 // mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -80,7 +83,7 @@ app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req
 
 //returns data about a genre by name
 app.get('movies/genres/:Name', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Movies.findOne({ 'Genre.Name': req.params.Name })
+  Genres.find({ Name: req.params.Name })
     .then((movie) => {
       res.json(movie);
     })
