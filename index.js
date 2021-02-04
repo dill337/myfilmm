@@ -79,10 +79,20 @@ app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req
 // })
 
 //returns data about a genre by name
-app.get('/genre/:name', (req, res) => {
-  res.send('Here is the genre you selected')
+app.get('/genre/:name', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Movies.find({ Genre: req.params.Genre })
+    .then((movie) => {
+      res.json(movie);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
 
-})
+// res.send('Here is the genre you selected')
+
+// })
 
 //returns data about a director (bio, birth year, death year) by name
 app.get('/director/:name', (req, res) => {
