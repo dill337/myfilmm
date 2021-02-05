@@ -68,8 +68,8 @@ app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) 
 
 app.get('/genres', passport.authenticate('jwt', { session: false }), (req, res) => {
   Genres.find()
-    .then((genres) => {
-      res.status(201).json(genres);
+    .then((movies) => {
+      res.status(201).json(movies);
     })
     .catch((err) => {
       console.error(err);
