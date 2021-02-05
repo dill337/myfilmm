@@ -66,7 +66,7 @@ app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) 
     });
 });
 
-app.get('/genres', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/genre', passport.authenticate('jwt', { session: false }), (req, res) => {
   Genres.find()
     .then((movies) => {
       res.status(201).json(movies);
