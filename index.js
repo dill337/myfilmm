@@ -280,6 +280,21 @@ app.post('/genres/:Name/Movies/:MovieID', passport.authenticate('jwt', { session
     });
 });
 
+app.post('/movies/:Title/Genres/:GenreID', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Movies.findOneAndUpdate({ Title: req.params.Title }, {
+    $push: { Genre: req.params.GenreID }
+  },
+    { new: true }, // this makes sure the document is returned 
+    (err, updatedUser) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('Error: ' + err);
+      } else {
+        res.json(updatedUser);
+      }
+    });
+});
+
 
 //user can delete a movie from their favorites
 app.delete('/users/:Username/Movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
