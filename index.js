@@ -18,12 +18,12 @@ const Genres = Models.Genre;
 const Directors = Models.Director;
 const Actors = Models.Actor;
 
-// mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/myFilmDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // mongoose.connect('mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.use(express.static('public'));
@@ -252,6 +252,22 @@ app.put('/users/:Username', passport.authenticate('jwt', { session: false }), (r
 app.post('/users/:Username/Movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.findOneAndUpdate({ Username: req.params.Username }, {
     $push: { FavoriteMovies: req.params.MovieID }
+  },
+    { new: true }, // this makes sure the document is returned 
+    (err, updatedUser) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('Error: ' + err);
+      } else {
+        res.json(updatedUser);
+      }
+    });
+});
+
+//add a movie to a genre
+app.post('/genres/:Name/Movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Genres.findOneAndUpdate({ Name: req.params.Name }, {
+    $push: { GenreMovies: req.params.MovieID }
   },
     { new: true }, // this makes sure the document is returned 
     (err, updatedUser) => {
