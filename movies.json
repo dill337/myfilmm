@@ -8,12 +8,7 @@
     "Name": "Thriller",
     "Description": "Thriller is a broad film genre that involves excitement and suspense in the audience."
   },
-  "Director": {
-    "Name": "Jonathan Demme",
-    "Bio": "Robert Jonathan Demme was an American director, producer, and screenwriter.",
-    "Birth": "1944",
-    "Death": "2017"
-  },
+  "Director": [],
   "ImagePath": "silenceofthelambs.png",
   "Actors": [
     "Jodie Foster"
@@ -29,14 +24,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "Farrelly Brothers",
-    "Bio": "The Farrelly Brothers are American directors, producers, and screenwriters.",
-    "Birth": [
-      "Peter : 12-17-1956",
-      "Robert : 06-17-1958"
-    ]
-  },
+  "Director": [],
   "Actors": [
     "Jim Carrey",
     "Jeff Daniels"
@@ -54,14 +42,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "Farrelly Brothers",
-    "Bio": "The Farrelly Brothers are American directors, producers, and screenwriters.",
-    "Birth": [
-      "Peter : 12-17-1956",
-      "Robert : 06-17-1958"
-    ]
-  },
+  "Director": [],
   "Actors": [
     "Woody Harrelson",
     "Randy Quaid"
@@ -79,12 +60,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "John Hughes",
-    "Bio": "John Wilden Hughes Jr. was an American filmmaker. Beginning as an author of humorous essays and stories for National Lampoon, he went on to write, produce and sometimes direct some of the most successful live-action comedy films of the 1980s and 1990s.",
-    "Birth": "1950",
-    "Death": "2009"
-  },
+  "Director": [],
   "Actors": [
     "John Candy",
     "Macaulay Culkin"
@@ -102,12 +78,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "Alan Metter",
-    "Bio": "Alan Dennis Metter was an American film director.",
-    "Birth": "1944",
-    "Death": "2014"
-  },
+  "Director": [],
   "Actors": [
     "Rodney Dangerfield",
     "Robert Downey Jr."
@@ -129,12 +100,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "Harold Ramis",
-    "Bio": "Harold Allen Ramis was an American actor, comedian, director and writer.",
-    "Birth": "1944",
-    "Death": "2014"
-  },
+  "Director": [],
   "Actors": [
     "Rodney Dangerfield",
     "Bill Murray",
@@ -153,11 +119,7 @@
     "Name": "Comedy",
     "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
   },
-  "Director": {
-    "Name": "Yorgos Lanthimos",
-    "Bio": "Georgios 'Yorgos' Lanthimos is a Greek film director, film producer, screenwriter, photographer, and theatre director.",
-    "Birth": "1973"
-  },
+  "Director": [],
   "Actors": [
     "Colin Farrel",
     "Rachel Weisz"
@@ -176,11 +138,7 @@
     "Name": "Horror",
     "Description": "A horror film is one that seeks to elicit fear in its audience for entertainment purposes. Horror films additionally aim to evoke viewers' nightmares, fears, revulsions and terror of the unknown and macabre"
   },
-  "Director": {
-    "Name": "C. Robert Cargill",
-    "Bio": "Christopher Robert Cargill is an American screenwriter, novelist, podcast host, and former film critic known under the pseudonyms Massawyrm and Carlyle.",
-    "Birth": "1975"
-  },
+  "Director": [],
   "Actors": [
     "Ethan Hawke",
     "James Ransone"
@@ -198,11 +156,7 @@
     "Name": "Horror",
     "Description": "A horror film is one that seeks to elicit fear in its audience for entertainment purposes. Horror films additionally aim to evoke viewers' nightmares, fears, revulsions and terror of the unknown and macabre"
   },
-  "Director": {
-    "Name": "Drew Goddard",
-    "Bio": "Andrew Brion Hogan Goddard is an American film and television screenwriter, director, and producer",
-    "Birth": "1975"
-  },
+  "Director": [],
   "Actors": [
     "Chris Hemsworth",
     "Kristen Connolly"
@@ -220,11 +174,7 @@
     "Name": "Action",
     "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
   },
-  "Director": {
-    "Name": "John McTiernan",
-    "Bio": "John Campbell McTiernan Jr. is an American filmmaker.",
-    "Birth": "1951"
-  },
+  "Director": [],
   "Actors": [
     "Bruce Willis",
     "Alan Rickman"
@@ -242,11 +192,7 @@
     "Name": "Action",
     "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
   },
-  "Director": {
-    "Name": "James Cameron",
-    "Bio": "James Francis Cameron CC is a Canadian film director, producer, screenwriter, editor, and environmentalist.",
-    "Birth": "1954"
-  },
+  "Director": [],
   "Actors": [
     "Arnold Schwarzenegger",
     "Linda Hamilton"
@@ -264,11 +210,7 @@
     "Name": "Action",
     "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
   },
-  "Director": {
-    "Name": "James Cameron",
-    "Bio": "James Francis Cameron CC is a Canadian film director, producer, screenwriter, editor, and environmentalist.",
-    "Birth": "1954"
-  },
+  "Director": [],
   "Actors": [
     "Arnold Schwarzenegger",
     "Linda Hamilton",
@@ -287,11 +229,7 @@
     "Name": "Action",
     "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
   },
-  "Director": {
-    "Name": "Quentin Tarantino",
-    "Bio": "Quentin Tarantino is an American film director, screenwriter, producer, and actor.",
-    "Birth": "1963"
-  },
+  "Director": [],
   "Actors": [
     "Quentin Tarantino",
     "Harvey Keitel",
@@ -312,11 +250,7 @@
     "Name": "Action",
     "Description": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, rescues and frantic chases."
   },
-  "Director": {
-    "Name": "Stefano Sollima",
-    "Bio": "Stefano Sollima is an Italian director and screenwriter.",
-    "Birth": "1966"
-  },
+  "Director": [],
   "Actors": [
     "Benicio del Toro",
     "Josh Brolin",
@@ -337,11 +271,7 @@
     ],
     "Description": "Action-Drama Films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature, with suspenseful action packed scenes."
   },
-  "Director": {
-    "Name": "David Fincher",
-    "Bio": "David Andrew Leo Fincher (born August 28, 1962) is an American film director.",
-    "Birth": "1962"
-  },
+  "Director": [],
   "Actors": [
     "Brad Pitt",
     "Edward Norton"
@@ -361,11 +291,7 @@
     ],
     "Description": "Action-Drama Films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature, with suspenseful action packed scenes."
   },
-  "Director": {
-    "Name": "Guy Ritchie",
-    "Bio": "Guy Ritchie is an English film director.",
-    "Birth": "1968"
-  },
+  "Director": [],
   "Actors": [
     "Brad Pitt",
     "Jason Statham",
