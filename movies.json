@@ -212,28 +212,6 @@
 }
 {
   "_id": {
-    "$oid": "601371df8db5020db938173e"
-  },
-  "Title": "Cabin in the Woods",
-  "Description": "The plot follows a group of college students who retreat to a remote forest cabin where they fall victim to backwoods zombies while technicians manipulate events from an underground facility.",
-  "Genre": {
-    "Name": "Horror",
-    "Description": "A horror film is one that seeks to elicit fear in its audience for entertainment purposes. Horror films additionally aim to evoke viewers' nightmares, fears, revulsions and terror of the unknown and macabre"
-  },
-  "Director": {
-    "Name": "Drew Goddard",
-    "Bio": "Andrew Brion Hogan Goddard is an American film and television screenwriter, director, and producer",
-    "Birth": "1975"
-  },
-  "Actors": [
-    "Chris Hemsworth",
-    "Kristen Connolly"
-  ],
-  "ImagePath": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuWGfnnuaPfaelECTAK2g-Am0x_9DswV6BON3_Vh2u_1twyzwh",
-  "Featured": false
-}
-{
-  "_id": {
     "$oid": "6013732a8db5020db938173f"
   },
   "Title": "Die Hard",
@@ -384,7 +362,7 @@
     "Description": "Action-Drama Films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature, with suspenseful action packed scenes."
   },
   "Director": {
-    "Name": "Guy Ritchide",
+    "Name": "Guy Ritchie",
     "Bio": "Guy Ritchie is an English film director.",
     "Birth": "1968"
   },
