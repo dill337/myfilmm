@@ -1,130 +1,15 @@
-{
-  "_id": {
-    "$oid": "601c8a5ebe3a120428963da7"
-  },
-  "Name": "Stefano Sollima",
-  "Bio": "Stefano Sollima was born in Rome, Lazio, Italy.",
-  "Birth": "1966",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8ababe3a120428963da8"
-  },
-  "Name": "David Fincher",
-  "Bio": "David Fincher was born in Denver, Colorado, and was raised in Marin County, California. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley. He subsequently worked at ILM (Industrial Light and Magic) from 1981-1983. Fincher left ILM to direct TV commercials and music videos after signing with N. Lee Lacy in Hollywood.",
-  "Birth": "1962",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8b11be3a120428963da9"
-  },
-  "Name": "Guy Ritchie",
-  "Bio": "Guy Ritchie was born in Hatfield, Hertfordshire. After watching Butch Cassidy and the Sundance Kid (1969) as a child, Guy realized that what he wanted to do was make films. He never attended film school, saying that the work of film school graduates was boring and unwatchable. At 15 years old, he dropped out of school and in 1995, got a job as a runner, ultimately starting his film career.",
-  "Birth": "1968",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8b64be3a120428963daa"
-  },
-  "Name": "Quentin Tarantino",
-  "Bio": "Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee. Quentin moved with his mother to Torrance, California, when he was four years old.",
-  "Birth": "1963",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8bb8be3a120428963dab"
-  },
-  "Name": "John McTiernan",
-  "Bio": "John McTiernan was born in Albany, New York, USA as John Campbell McTiernan Jr. He is a director and producer",
-  "Birth": "1951",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8c1dbe3a120428963dac"
-  },
-  "Name": "James Cameron",
-  "Bio": "James Francis Cameron was born in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition.",
-  "Birth": "1954",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8c78be3a120428963dad"
-  },
-  "Name": "Drew Goddard",
-  "Bio": "Drew Goddard was raised in Los Alamos, New Mexico. He attended Los Alamos High School in Los Alamos, New Mexico and graduated in 1993. He then attended the University of Colorado, and worked as a production assistant in L.A. after graduation.",
-  "Birth": "1975",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8cc3be3a120428963dae"
-  },
-  "Name": "Yorgos Lanthimos",
-  "Bio": "Yorgos Lanthimos was born in Athens, Greece. He studied directing for Film and Television at the Stavrakos Film School in Athens. He has directed a number of dance videos in collaboration with Greek choreographers, in addition to TV commercials, music videos, short films and theater plays.",
-  "Birth": "1973",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8d79be3a120428963daf"
-  },
-  "Name": "Alan Dennis Metter",
-  "Bio": "Metter grew up in the Boston area, lived in the Hollywood Hills for most of his adult life, and moved to South Florida in 2009.  Alan began his creative life at Doyle Dane Bernbach, the legendary advertising agency. In the late 1970s, Metter leaped at the opportunity to direct some of the first music videos for the likes of George Harrison, Glenn Frey, Joe Walsh, Chicago, Olivia Newton-John, and Donna Summer, as well as comedians Rodney Dangerfield and Steve Martin, which were aired on the fledgling MTV.",
-  "Birth": "1942",
-  "Death": "2020",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8ddbbe3a120428963db0"
-  },
-  "Name": "Jonathan Demme",
-  "Bio": "Jonathan Demme was born in Baldwin, Long Island, New York, USA as Robert Jonathan Demme. He was a director and producer.",
-  "Birth": "1944",
-  "Death": "2017",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8e40be3a120428963db1"
-  },
-  "Name": "John Hughes",
-  "Bio": "John Hughes was born in Lansing, Michigan, USA as John Wilden Hughes Jr.",
-  "Birth": "1950",
-  "Death": "2009",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601c8e9cbe3a120428963db2"
-  },
-  "Name": "Harold Ramis",
-  "Bio": "Born on in Chicago, Illinois, Harold Allen Ramis got his start in comedy as Playboy magazine's joke editor and reviewer. In 1969, he joined Chicago's Second City's Improvisational Theatre Troupe before moving to New York to help write and perform in \"The National Lampoon Show\" with other Second City graduates including John Belushi, Gilda Radner and Bill Murray.",
-  "Birth": "1944",
-  "Death": "2014",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601ca84dbe3a120428963db3"
-  },
-  "Name": "C. Robert Cargill",
-  "Bio": "Christopher Robert Cargill was born on September 8, 1975 in San Antonio, Texas, USA as Christopher Robert Cargill. He is a writer, known for Doctor Strange (2016), Sinister (2012) and Sinister 2 (2015). He has been married to Jessica Cargill since May 4, 2002.",
-  "Birth": "1975",
-  "DirectedMovies": []
-}
-{
-  "_id": {
-    "$oid": "601ca8f0be3a120428963db4"
-  },
-  "Name": "Farrelly Brothers",
-  "Bio": "Peter John Farrelly was born in Phoenixville, Pennsylvania, Bobby Farrelly was born in Cumberland, Rhode Island.",
-  "Birth": "Peter - 1956, Bobby 1958",
-  "DirectedMovies": []
-}
+{"_id":{"$oid":"601c8a5ebe3a120428963da7"},"Name":"Stefano Sollima","Bio":"Stefano Sollima was born in Rome, Lazio, Italy.","Birth":"1966","DirectedMovies":[{"$oid":"6013773e8db5020db9381743"}]}
+{"_id":{"$oid":"601c8ababe3a120428963da8"},"Name":"David Fincher","Bio":"David Fincher was born in Denver, Colorado, and was raised in Marin County, California. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley. He subsequently worked at ILM (Industrial Light and Magic) from 1981-1983. Fincher left ILM to direct TV commercials and music videos after signing with N. Lee Lacy in Hollywood.","Birth":"1962","DirectedMovies":[{"$oid":"601379048db5020db9381744"}]}
+{"_id":{"$oid":"601c8b11be3a120428963da9"},"Name":"Guy Ritchie","Bio":"Guy Ritchie was born in Hatfield, Hertfordshire. After watching Butch Cassidy and the Sundance Kid (1969) as a child, Guy realized that what he wanted to do was make films. He never attended film school, saying that the work of film school graduates was boring and unwatchable. At 15 years old, he dropped out of school and in 1995, got a job as a runner, ultimately starting his film career.","Birth":"1968","DirectedMovies":[{"$oid":"601379e88db5020db9381745"}]}
+{"_id":{"$oid":"601c8b64be3a120428963daa"},"Name":"Quentin Tarantino","Bio":"Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee. Quentin moved with his mother to Torrance, California, when he was four years old.","Birth":"1963","DirectedMovies":[{"$oid":"601375ca8db5020db9381742"}]}
+{"_id":{"$oid":"601c8bb8be3a120428963dab"},"Name":"John McTiernan","Bio":"John McTiernan was born in Albany, New York, USA as John Campbell McTiernan Jr. He is a director and producer","Birth":"1951","DirectedMovies":[{"$oid":"6013732a8db5020db938173f"}]}
+{"_id":{"$oid":"601c8c1dbe3a120428963dac"},"Name":"James Cameron","Bio":"James Francis Cameron was born in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition.","Birth":"1954","DirectedMovies":[{"$oid":"601374048db5020db9381740"},{"$oid":"6013747e8db5020db9381741"}]}
+{"_id":{"$oid":"601c8c78be3a120428963dad"},"Name":"Drew Goddard","Bio":"Drew Goddard was raised in Los Alamos, New Mexico. He attended Los Alamos High School in Los Alamos, New Mexico and graduated in 1993. He then attended the University of Colorado, and worked as a production assistant in L.A. after graduation.","Birth":"1975","DirectedMovies":[{"$oid":"601371cf8db5020db938173d"}]}
+{"_id":{"$oid":"601c8cc3be3a120428963dae"},"Name":"Yorgos Lanthimos","Bio":"Yorgos Lanthimos was born in Athens, Greece. He studied directing for Film and Television at the Stavrakos Film School in Athens. He has directed a number of dance videos in collaboration with Greek choreographers, in addition to TV commercials, music videos, short films and theater plays.","Birth":"1973","DirectedMovies":[{"$oid":"60136f938db5020db938173b"}]}
+{"_id":{"$oid":"601c8d79be3a120428963daf"},"Name":"Alan Dennis Metter","Bio":"Metter grew up in the Boston area, lived in the Hollywood Hills for most of his adult life, and moved to South Florida in 2009.  Alan began his creative life at Doyle Dane Bernbach, the legendary advertising agency. In the late 1970s, Metter leaped at the opportunity to direct some of the first music videos for the likes of George Harrison, Glenn Frey, Joe Walsh, Chicago, Olivia Newton-John, and Donna Summer, as well as comedians Rodney Dangerfield and Steve Martin, which were aired on the fledgling MTV.","Birth":"1942","Death":"2020","DirectedMovies":[{"$oid":"60136d6d8db5020db9381739"}]}
+{"_id":{"$oid":"601c8ddbbe3a120428963db0"},"Name":"Jonathan Demme","Bio":"Jonathan Demme was born in Baldwin, Long Island, New York, USA as Robert Jonathan Demme. He was a director and producer.","Birth":"1944","Death":"2017","DirectedMovies":[{"$oid":"601346fe8db5020db9381735"}]}
+{"_id":{"$oid":"601c8e40be3a120428963db1"},"Name":"John Hughes","Bio":"John Hughes was born in Lansing, Michigan, USA as John Wilden Hughes Jr.","Birth":"1950","Death":"2009","DirectedMovies":[{"$oid":"60136c618db5020db9381738"}]}
+{"_id":{"$oid":"601c8e9cbe3a120428963db2"},"Name":"Harold Ramis","Bio":"Born on in Chicago, Illinois, Harold Allen Ramis got his start in comedy as Playboy magazine's joke editor and reviewer. In 1969, he joined Chicago's Second City's Improvisational Theatre Troupe before moving to New York to help write and perform in \"The National Lampoon Show\" with other Second City graduates including John Belushi, Gilda Radner and Bill Murray.","Birth":"1944","Death":"2014","DirectedMovies":[{"$oid":"60136e878db5020db938173a"}]}
+{"_id":{"$oid":"601ca84dbe3a120428963db3"},"Name":"C. Robert Cargill","Bio":"Christopher Robert Cargill was born on September 8, 1975 in San Antonio, Texas, USA as Christopher Robert Cargill. He is a writer, known for Doctor Strange (2016), Sinister (2012) and Sinister 2 (2015). He has been married to Jessica Cargill since May 4, 2002.","Birth":"1975","DirectedMovies":[]}
+{"_id":{"$oid":"601ca8f0be3a120428963db4"},"Name":"Farrelly Brothers","Bio":"Peter John Farrelly was born in Phoenixville, Pennsylvania, Bobby Farrelly was born in Cumberland, Rhode Island.","Birth":"Peter - 1956, Bobby 1958","DirectedMovies":[{"$oid":"60136a848db5020db9381737"},{"$oid":"601369a08db5020db9381736"}]}
+{"_id":{"$oid":"601ee2dc9d551717b7e4fb86"},"Name":"Scott Derrickson","Bio":"Scott Derrickson was born in Denver Colorado.  He is a producer and writer.","Birth":"1966","DirectedMovies":[{"$oid":"601370cf8db5020db938173c"}]}
