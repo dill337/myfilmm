@@ -34,7 +34,12 @@ let auth = require('./auth')(app);
 
 const cors = require('cors');
 
-let allowedOrigins = ['http://localhost:8080', 'http://localhost:1234'];
+let allowedOrigins =
+  ['http://localhost:8080',
+    'http://localhost:1234',
+    'https://myfilmm.herokuapp.com/movies'
+  ]
+
 
 app.use(cors({
   origin: (origin, callback) => {

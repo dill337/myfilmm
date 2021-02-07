@@ -19,24 +19,27 @@ let movie23 = {
 db.movies.insertOne(movie23)
 
 
-let genre6 = {
-  Name: "Drama",
-  Description: "In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.",
+let genre7 = {
+  Name: "Sci-fi",
+  Description: "Science fiction (or sci-fi) is a film genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science, such as extraterrestrial lifeforms, alien worlds, extrasensory perception and time travel, along with futuristic elements such as spacecraft, robots, cyborgs, interstellar travel or other technologies.",
   GenreMovies: [],
 }
 
-db.genres.insertOne(genre6)
+db.genres.insertOne(genre7)
 
 
-let director2 = {
-  Name: "Farrelly Brothers",
-  Bio: "Peter John Farrelly was born in Phoenixville, Pennsylvania, Bobby Farrelly was born in Cumberland, Rhode Island.",
-  Birth: "Peter - 1956, Bobby 1958",
+let director12 = {
+  Name: "Scott Derrickson",
+  Bio: "Scott Derrickson was born in Denver Colorado.  He is a producer and writer.",
+  Birth: "1966",
   DirectedMovies: []
 }
 
-db.directors.insertOne(director2)
+db.directors.insertOne(director12)
 
+
+//export a collection
+//mongoexport -d myFilmDB -c movies -o movies.json
 
 // /*
 // Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.
@@ -76,14 +79,29 @@ db.movies.update(
 )
 
 db.genres.update(
-  { Name: "Horror" },
-  { $push: { GenreMovies: ObjectId("601371cf8db5020db938173d") } }
+  { Name: "Thriller" },
+  { $push: { GenreMovies: ObjectId("601346fe8db5020db9381735") } }
 )
+
+db.directors.update(
+  { Name: "Quentin Tarantino" },
+  { $push: { DirectedMovies: ObjectId("601375ca8db5020db9381742") } }
+)
+
+db.directors.deleteOne({ GenreMovies })
+
+db.directors.update({}, { $unset: { GenreMovies: 1 } }, { multi: true });
+
+db.users.update({}, { $unset: { FavorieMovies: 1 } }, { multi: true });
 
 db.movies.update(
   { "_id": ObjectId("6013773e8db5020db9381743") },
   { $set: { Director: [] } })
 
+db.users.update(
+  { _id: ObjectId("60139d2d8db5020db938174a") },
+  { $set: { FavoriteMovies: [] } }
+)
 
 
 "_id" : ObjectId("6013773e8db5020db9381743")
@@ -95,8 +113,8 @@ db.movies.update(
 //   _id" : ObjectId("60136f938db5020db938173b")
 
 
-// mongoimport --uri mongodb+srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection genres --type JSON --file ./genres.json
-mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection movies --type json --file ./movies.json
+mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection users --type JSON --file ./users.json
+mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection directors --type JSON --file ./directors.json
 
 // mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/myFilmDB" --username dill337
 // mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/<dbname>" --username dill337
