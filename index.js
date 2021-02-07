@@ -25,13 +25,6 @@ const Actors = Models.Actor;
 
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-
-app.use(express.static('public'));
-app.use(morgan('common'));
-app.use(bodyParser.json());
-
-let auth = require('./auth')(app);
-
 const cors = require('cors');
 
 
@@ -55,6 +48,14 @@ let allowedOrigins = ['*']
 // ]
 
 app.use(cors());
+
+app.use(express.static('public'));
+app.use(morgan('common'));
+app.use(bodyParser.json());
+
+let auth = require('./auth')(app);
+
+
 
 
 // Get requests
