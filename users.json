@@ -1,0 +1,8 @@
+{"_id":{"$oid":"60139c178db5020db9381746"},"Username":"Tim22","Password":"tom22","Email":"tim22@aol.com","Birthday":"03/04/1978","FavoriteMovies":[]}
+{"_id":{"$oid":"60139cb98db5020db9381747"},"Username":"Jim22","Password":"Jom22","Email":"Jim22@aol.com","Birthday":"04/12/79","FavoriteMovies":[{"$oid":"6013732a8db5020db938173f"},{"$oid":"60136d6d8db5020db9381739"},{"$oid":"6013732a8db5020db938173f"}]}
+{"_id":{"$oid":"60139cf68db5020db9381748"},"Username":"Kim22","Password":"kom22","Email":"kim22@aol.com","Birthday":"04/11/79","FavoriteMovies":[{"$oid":"6013732a8db5020db938173f"},{"$oid":"601379e88db5020db9381745"},{"$oid":"601374048db5020db9381740"}]}
+{"_id":{"$oid":"60139d128db5020db9381749"},"Username":"Rim22","Password":"rom22","Email":"rim22@aol.com","Birthday":"04/10/79","FavoriteMovies":[{"$oid":"601379048db5020db9381744"},{"$oid":"601374048db5020db9381740"}]}
+{"_id":{"$oid":"60139d2d8db5020db938174a"},"Username":"Wim22","Password":"wom22","Email":"wim22@aol.com","Birthday":"05/10/79","FavoriteMovies":[]}
+{"_id":{"$oid":"6015def0a63c17dbf036ac72"},"FavoriteMovies":[],"Username":"Bim22","Password":"bom22","Email":"bim22@aol.com","Birthday":{"$date":"1999-08-09T05:00:00Z"},"__v":0}
+{"_id":{"$oid":"6015e223ba13f6dc82d31812"},"FavoriteMovies":[],"Username":"Cim22","Password":"com22","Email":"cim22@aol.com","Birthday":{"$date":"1999-01-09T06:00:00Z"},"__v":0}
+{"_id":{"$oid":"6015e3a8ba13f6dc82d31814"},"FavoriteMovies":[],"Username":"Fim22","Password":"fom22","Email":"fim22@aol.com","Birthday":{"$date":"1997-09-19T05:00:00Z"},"__v":0}
