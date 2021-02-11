@@ -1,4 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Card, Container } from 'react-bootstrap';
+import { Spring } from 'react-spring'
+
+import './movie-card.scss'
+
 
 export class MovieCard extends React.Component {
   render() {
@@ -8,7 +14,32 @@ export class MovieCard extends React.Component {
     const { movie, onClick } = this.props;
 
     return (
-      <div onClick={() => onClick(movie)} className="movie-card">{movie.Title}</div>
+
+      <Card className="card_style" style={{ width: '20rem' }} >
+
+        <Card.Body className='text-center'>
+          <Card.Img className='movie_poster' variant="top" src={movie.ImagePath} />
+          {/* <Card.Body> */}
+          <Button onClick={() => onClick(movie)} className="title_click" variant="link">{movie.Title}</Button>
+          {/* <Card.Text>{movie.Description}</Card.Text> */}
+          {/* <Button onClick={() => onClick(movie)} variant="link">{movie.Title}</Button> */}
+          {/* </Card.Body> */}
+          {/* </Card.Header> */}
+
+          <br />
+
+        </Card.Body>
+      </Card>
+
     );
   }
 }
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
+};

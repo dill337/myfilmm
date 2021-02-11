@@ -1,0 +1,25 @@
+.movie-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-poster {
+  height: 500px;
+  width: 350px;
+
+}
+
+.value {
+  color: white;
+}
+
+.label {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-shadow: 3px 3px blue;
+}
