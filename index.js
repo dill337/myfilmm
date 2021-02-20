@@ -126,16 +126,16 @@ app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req
 // })
 
 //returns data about a genre by name
-app.get('movies/genres/:Name', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Genres.find({ Name: req.params.Name })
-    .then((movie) => {
-      res.json(movie);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send('Error: ' + err);
-    });
-});
+// app.get('movies/genres/:Name', passport.authenticate('jwt', { session: false }), (req, res) => {
+//   Genres.find({ Name: req.params.Name })
+//     .then((movie) => {
+//       res.json(movie);
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//       res.status(500).send('Error: ' + err);
+//     });
+// });
 
 // res.send('Here is the genre you selected')
 

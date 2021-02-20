@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -21,32 +22,45 @@ export class MainView extends React.Component {
 
     //initialize the stae to an empty object so we can destructure it laterr 
     this.state = {
-      movies: null,
+      movies: [],
       selectedMovie: null,
       user: null,
       registered: null,
+      genres: [],
+      genreMovies: [],
+      directorMovies: [],
     };
   }
 
   //one fo the "hooks" availabe in a react component 
   componentDidMount() {
-    axios.get('https://myfilmm.herokuapp.com/movies')
-      .then(response => {
-        //assign the result to the state
-        this.setState({
-          movies: response.data
-        });
-      })
-      .catch(function (error) {
-        console.log(error);
+    let accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.setState({
+        user: localStorage.getItem('user')
       });
+      this.getMovies(accessToken);
+      this.getGenres(accessToken);
+      this.getDirectors(accessToken);
+    }
+
+    // axios.get('https://myfilmm.herokuapp.com/movies')
+    //   .then(response => {
+    //     //assign the result to the state
+    //     this.setState({
+    //       movies: response.data
+    //     });
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
   }
 
-  onMovieClick(movie) {
-    this.setState({
-      selectedMovie: movie
-    });
-  }
+  // onMovieClick(movie) {
+  //   this.setState({
+  //     selectedMovie: movie
+  //   });
+  // }
 
   onBackClick() {
     this.setState({
@@ -60,10 +74,10 @@ export class MainView extends React.Component {
     })
   }
 
-  onLogOut(user) {
-    this.setState({
-      user: null
-    })
+  onLogOut() {
+    this.props.user({})
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
   }
 
   onLoggedIn(authData) {
@@ -75,6 +89,7 @@ export class MainView extends React.Component {
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
+    this.getDirectors(authData.token);
   }
 
   getMovies(token) {
@@ -92,11 +107,41 @@ export class MainView extends React.Component {
       })
   }
 
+  getGenres(token) {
+    axios.get('https://myfilmm.herokuapp.com/genres', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        //assing the result to the state
+        this.setState({
+          genres: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
+
+  getDirectors(token) {
+    axios.get('https://myfilmm.herokuapp.com/directors', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        //assing the result to the state
+        this.setState({
+          directors: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
+
 
 
   render() {
     //if the state isnt initialized, it will throw on runtime before data is loaded
-    const { movies, selectedMovie, user } = this.state;
+    const { movies, selectedMovie, user, genres, directors } = this.state;
 
     if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
@@ -104,26 +149,41 @@ export class MainView extends React.Component {
     if (!movies) return <div className="main-view" />;
 
     return (
-      <div>
-        <Mynavbar
-          onClick={() => this.onLogOut()}
-        />
-        <div className="movie-container">
-
-          {selectedMovie
-            ? (<MovieView
-              movie={selectedMovie}
-              onClick={() => this.onBackClick()}
-            />)
-            : (movies.map(movie => (
-              <MovieCard
-                key={movie._id}
-                movie={movie}
-                onClick={movie => this.onMovieClick(movie)} />
-            ))
-            )}
-        </div>
+      <div className="movie-container">
+        <Router>
+          <div className='main-view'>
+            <Route exact path="/" render={() => {
+              if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+              return movies.map(m => <MovieCard key={m._id} movie={m} />)
+            }} />
+            <Route path="/register" render={() => <RegistrationView />} />
+            <Route exact path="/movies/:_id" render={({ match }) => <MovieView movie={movies.find(movie => movie._id === match.params._id)} />} />
+            <Route exact path="/genres/:genreId" render={({ match }) => <GenreView genre={genres.find(genre => genre._id === match.params.genreId)} />} />
+            <Route exact path="/directors/:directorId" render={({ match }) => <DirectorView director={directors.find(director => director._id === match.params.directorId)} />} />
+          </div>
+        </Router>
       </div>
+
+      // <div>
+      //   <Mynavbar
+      //     onClick={() => this.onLogOut()}
+      //   />
+      //   <div className="movie-container">
+
+      //     {selectedMovie
+      //       ? (<MovieView
+      //         movie={selectedMovie}
+      //         onClick={() => this.onBackClick()}
+      //       />)
+      //       : (movies.map(movie => (
+      //         <MovieCard
+      //           key={movie._id}
+      //           movie={movie}
+      //           onClick={movie => this.onMovieClick(movie)} />
+      //       ))
+      //       )}
+      //   </div>
+      // </div>
     );
   }
 }
