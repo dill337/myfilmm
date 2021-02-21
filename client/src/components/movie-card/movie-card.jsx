@@ -45,7 +45,6 @@ export class MovieCard extends React.Component {
 
     return (
       <div className="card">
-        <br />
 
         <Card className="back_card">
           <Card className="card_style" style={{ width: '16rem' }}>

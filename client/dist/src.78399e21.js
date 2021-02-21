@@ -51528,7 +51528,7 @@ var MovieCard = /*#__PURE__*/function (_React$Component) {
 
       return _react.default.createElement("div", {
         className: "card"
-      }, _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
+      }, _react.default.createElement(_reactBootstrap.Card, {
         className: "back_card"
       }, _react.default.createElement(_reactBootstrap.Card, {
         className: "card_style",
