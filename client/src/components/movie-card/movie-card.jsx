@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card } from 'react-bootstrap';
-import { Spring } from 'react-spring'
+import { Button, Card, Container, Row, Col } from 'react-bootstrap';
+import { Spring } from 'react-spring';
+
 
 import { Link } from 'react-router-dom';
 
@@ -13,19 +14,56 @@ export class MovieCard extends React.Component {
   render() {
     const { movie } = this.props;
 
+
+    // return (
+    //   <Container>
+    //     <br></br>
+    //     <Card>
+    //       <Row>
+    //         <Card className="card_style" style={{ width: '16rem' }}>
+    //           <Col>
+    //             <Row>
+    //               <Col>
+    //                 <Card.Img variant="top" src={movie.ImagePath} />
+    //                 <Card.Body className='text-center'>
+    //                   {/* <Card.Title>{movie.Title}</Card.Title> */}
+    //                   {/* <Card.Text>{movie.Description}</Card.Text> */}
+    //                   <Link to={`/movies/${movie._id}`}>
+    //                     <Button className="title_click" variant="link">{movie.Title}</Button>
+    //                   </Link>
+    //                 </Card.Body>
+    //               </Col>
+    //             </Row>
+    //           </Col>
+    //         </Card>
+    //       </Row>
+    //     </Card>
+    //   </Container>
+    // )
+
+
+
     return (
-      <Card className="card_style" style={{ width: '16rem' }}>
-        <Card.Img variant="top" src={movie.ImagePath} />
-        <Card.Body className='text-center'>
-          {/* <Card.Title>{movie.Title}</Card.Title> */}
-          {/* <Card.Text>{movie.Description}</Card.Text> */}
-          <Link to={`/movies/${movie._id}`}>
-            <Button className="title_click" variant="link">{movie.Title}</Button>
-          </Link>
-        </Card.Body>
-      </Card>
+      <div className="card">
+        <br />
+
+        <Card className="back_card">
+          <Card className="card_style" style={{ width: '16rem' }}>
+            <Card.Img variant="top" src={movie.ImagePath} />
+            <Card.Body className='text-center'>
+              {/* <Card.Title>{movie.Title}</Card.Title> */}
+              {/* <Card.Text>{movie.Description}</Card.Text> */}
+              <Link to={`/movies/${movie._id}`}>
+                <Button className="title_click retro_solid" variant="link">{movie.Title}</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        </Card>
+      </div>
     )
   }
+
+
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container } from 'react-bootstrap';
 import axios from 'axios';
 import { Spring } from 'react-spring';
 
@@ -84,36 +84,51 @@ export class MovieView extends React.Component {
     //     const { movie } = this.props;
 
     return (
-      <div>
-        <Card className="card_style" style={{ width: '25rem' }}>
-          <Card.Img variant="top" src={movie.ImagePath} />
-          <Card.Body className='text-center'>
-            <Card.Title>{movie.Title}</Card.Title>
-            <Card.Text>{movie.Description}</Card.Text>
-            {
-              this.filterGenres().map((genre, index) => {
-                return <Link key={`${genre.Name}-${index}`} to={`/genres/${genre._id}`}>
-                  <Button variant="link">{genre.Name}</Button>
-                </Link>
-              })
-            }
-            {
-              this.filterDirectors().map((director, index) => {
-                return <Link key={`${director.Name}-${index}`} to={`/directors/${director._id}`}>
-                  <Button variant="link">{director.Name}</Button>
-                </Link>
-              })
-            }
-
-            {/* <Link to={`/directors/_id`}>
+      <Container>
+        <div>
+          <Card className="card_style" style={{ width: '25rem' }}>
+            <Card.Img variant="top" src={movie.ImagePath} />
+            <Card.Body className='text-center'>
+              <Card.Title className="label retro_solid">{movie.Title}</Card.Title>
+              <Card.Text>{movie.Description}</Card.Text>
+              <br />
+              <br />
+              <div>
+                <h5 className="retro_solid">Genre</h5>
+                {
+                  this.filterGenres().map((genre, index) => {
+                    return <Link key={`${genre.Name}-${index}`} to={`/genres/${genre._id}`}>
+                      <Button variant="link">{genre.Name}</Button>
+                    </Link>
+                  })
+                }
+              </div>
+              <br />
+              <br />
+              <div>
+                <h5 className="retro_solid">Director</h5>
+                {
+                  this.filterDirectors().map((director, index) => {
+                    return <Link key={`${director.Name}-${index}`} to={`/directors/${director._id}`}>
+                      <Button variant="link">{director.Name}</Button>
+                    </Link>
+                  })
+                }
+              </div>
+              {/* <Link to={`/directors/_id`}>
               <Button variant="link">{director.name}</Button>
             </Link> */}
-            <Link to={`/`}>
-              <Button variant="link">Home Page</Button>
-            </Link>
-          </Card.Body>
-        </Card>
-      </div>
+              <br></br>
+              <br></br>
+              <div className="centerbutton">
+                <Link to={`/`}>
+                  <Button className="homescreen_click" variant="link">Home Page</Button>
+                </Link>
+              </div>
+            </Card.Body>
+          </Card>
+        </div>
+      </Container>
 
       // <Spring
       //   from={{ opacity: 0 }}

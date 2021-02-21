@@ -150,18 +150,23 @@ export class MainView extends React.Component {
 
     return (
       <div className="movie-container">
-        <Router>
-          <div className='main-view'>
-            <Route exact path="/" render={() => {
-              if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-              return movies.map(m => <MovieCard key={m._id} movie={m} />)
-            }} />
-            <Route path="/register" render={() => <RegistrationView />} />
-            <Route exact path="/movies/:_id" render={({ match }) => <MovieView movie={movies.find(movie => movie._id === match.params._id)} />} />
-            <Route exact path="/genres/:genreId" render={({ match }) => <GenreView genre={genres.find(genre => genre._id === match.params.genreId)} />} />
-            <Route exact path="/directors/:directorId" render={({ match }) => <DirectorView director={directors.find(director => director._id === match.params.directorId)} />} />
-          </div>
-        </Router>
+        <Container>
+          <Row>
+            <h1 className="main_header">MyFilmm</h1>
+          </Row>
+          <Router>
+            <div className='main-view'>
+              <Route exact path="/" render={() => {
+                if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+                return <div className="card-view"> {movies.map(m => <MovieCard key={m._id} movie={m} />)} </div>
+              }} />
+              <Route path="/register" render={() => <RegistrationView />} />
+              <Route exact path="/movies/:_id" render={({ match }) => <MovieView movie={movies.find(movie => movie._id === match.params._id)} />} />
+              <Route exact path="/genres/:genreId" render={({ match }) => <GenreView genre={genres.find(genre => genre._id === match.params.genreId)} />} />
+              <Route exact path="/directors/:directorId" render={({ match }) => <DirectorView director={directors.find(director => director._id === match.params.directorId)} />} />
+            </div>
+          </Router>
+        </Container>
       </div>
 
       // <div>

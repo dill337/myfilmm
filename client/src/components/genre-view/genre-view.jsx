@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
-
+import { MovieCard } from '../movie-card/movie-card';
 
 import { Link } from "react-router-dom";
+
+import './genre-view.scss'
 
 
 export class GenreView extends React.Component {
@@ -45,11 +48,23 @@ export class GenreView extends React.Component {
 
 
   render() {
-    const { genre, onClick } = this.props;
+    const { genre } = this.props;
     console.log(genre)
 
 
 
+    // return (
+    //   <Card className="card_style" style={{ width: '16rem' }}>
+    //     <Card.Img variant="top" src={movie.ImagePath} />
+    //     <Card.Body className='text-center'>
+    //       {/* <Card.Title>{movie.Title}</Card.Title> */}
+    //       {/* <Card.Text>{movie.Description}</Card.Text> */}
+    //       <Link to={`/movies/${movie._id}`}>
+    //         <Button className="title_click" variant="link">{movie.Title}</Button>
+    //       </Link>
+    //     </Card.Body>
+    //   </Card>
+    // )
 
 
 
@@ -64,21 +79,26 @@ export class GenreView extends React.Component {
         <div className="genre-movies">
           <span className="value">{genre.Movies}</span>
         </div>
-        <div className="movies-array">
+        <br />
+        <br />
+        <div className="centerbutton">
           {
             this.filterMovies().map((movie, index) => {
               return <Link key={`${movie.Title}-${index}`} to={`/movies/${movie._id}`}>
-                <Button variant="link">{movie.Title}</Button>
+                <MovieCard key={movie._id} movie={movie} />
               </Link>
             })
           }
         </div>
-        <Link to={`/`}>
-          <Button variant="link">Home Screen</Button>
-        </Link>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="centerbutton">
+          <Link to={`/`}>
+            <Button className="homescreen_click" variant="link">Home Page</Button>
+          </Link>
+        </div>
       </div>
-
-
     )
   }
 }

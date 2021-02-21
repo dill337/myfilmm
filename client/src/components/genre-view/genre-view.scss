@@ -1,0 +1,28 @@
+// .homescreen_click {
+//   color: black;
+//   font-size: large;
+//   background-color: yellow;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .listed_movie {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+@font-face {
+  src: url(../fonts/SFAlienEncounters-Italic.ttf);
+  font-family: retro;
+}
+
+@font-face {
+  src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
+  font-family: retro_solid;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  font-family: retro;
+}

@@ -1,14 +1,21 @@
-.movie-view {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .movie-view {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+@font-face {
+  src: url(../fonts/SFAlienEncounters-Italic.ttf);
+  font-family: retro;
 }
 
+@font-face {
+  src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
+  font-family: retro_solid;
+}
 .movie-poster {
   height: 500px;
   width: 350px;
-
 }
 
 .value {
@@ -22,4 +29,27 @@
   display: flex;
   justify-content: center;
   text-shadow: 3px 3px blue;
+}
+
+.back_button {
+  color: black;
+  font-family: retro;
+}
+
+.homescreen_click {
+  color: black;
+  font-size: large;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  font-family: retro;
+}
+
+.retro_solid {
+  font-family: retro_solid;
 }

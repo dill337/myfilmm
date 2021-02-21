@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
+import { MovieCard } from '../movie-card/movie-card';
+
 
 
 import { Link } from "react-router-dom";
+
+import './director-view.scss'
 
 
 export class DirectorView extends React.Component {
@@ -58,18 +62,25 @@ export class DirectorView extends React.Component {
         <div className="director-movies">
           <span className="value">{director.Movies}</span>
         </div>
-        <div className="movies-array">
+        <br />
+        <br />
+        <div className="centerbutton">
           {
             this.filterMovies().map((movie, index) => {
-              return <Link key={`${movie.Title}-${index}`} to={`/movies/${movie._id}`}>
-                <Button variant="link">{movie.Title}</Button>
-              </Link>
+              return <MovieCard key={movie._id} movie={movie} />
+              //<Link key={`${movie.Title}-${index}`} to={`/movies/${movie._id}`}>
+              // </Link>
             })
           }
         </div>
-        <Link to={`/`}>
-          <Button variant="link">Home Page</Button>
-        </Link>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="centerbutton">
+          <Link to={`/`}>
+            <Button className="homescreen_click" variant="link">Home Page</Button>
+          </Link>
+        </div>
       </div>
     )
   }

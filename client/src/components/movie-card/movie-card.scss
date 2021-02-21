@@ -1,7 +1,17 @@
+@font-face {
+  src: url(../fonts/SFAlienEncounters-Italic.ttf);
+  font-family: retro;
+}
+
+@font-face {
+  src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
+  font-family: retro_solid;
+}
+
 .movie_poster {
   height: 400px;
 }
-
+ 
 .card_style {
   border-color: darkblue;
   margin: 5px;
@@ -11,4 +21,12 @@
 .title_click {
   color: black;
   font-size: large;
+}
+
+.back_card {
+  background-color: yellow
+}
+
+.card {
+  flex-direction: column;
 }

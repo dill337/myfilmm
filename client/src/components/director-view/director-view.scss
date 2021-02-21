@@ -1,0 +1,36 @@
+// .director-view {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// .back-button-div {
+// display: flex;
+// justify-content: ;
+// }
+
+// .homescreen_click {
+//   color: black;
+//   font-size: large;
+//   background-color: yellow;
+// }
+
+// .listed_movie {
+//   display: flex;
+//   justify-content: center;
+// }
+@font-face {
+  src: url(../fonts/SFAlienEncounters-Italic.ttf);
+  font-family: retro;
+}
+
+@font-face {
+  src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
+  font-family: retro_solid;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  font-family: retro;
+}

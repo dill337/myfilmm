@@ -6,9 +6,10 @@
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
+    "react": "^16.14.0",
     "react-bootstrap": "^1.4.3",
-    "react-dom": "^17.0.1",
+    "react-css-animated": "^2.0.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-spring": "^8.0.27"
   },

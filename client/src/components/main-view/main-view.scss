@@ -1,6 +1,38 @@
+@font-face {
+  src: url(../fonts/SFAlienEncounters-Italic.ttf);
+  font-family: retro;
+}
+
+@font-face {
+  src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
+  font-family: retro_solid;
+}
+
 .movie-container {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   background-color: darkmagenta;
   justify-content: center;
 }
+
+.main-view {
+  display: flex;
+}
+
+.card-view {
+  flex-direction: row;
+
+}
+
+.main_header {
+  font-size: 70px;
+  color: lightseagreen;
+  font-weight: 500;
+  // font-stretch: expanded;
+  font-family: retro;
+  text-shadow: 3px 3px blue;
+  // display: grid;
+  justify-content: center;
+
+}
+
