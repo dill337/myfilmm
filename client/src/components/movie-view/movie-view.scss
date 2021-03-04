@@ -13,13 +13,22 @@
   src: url(../fonts/SFAlienEncountersSolid-Ital.ttf);
   font-family: retro_solid;
 }
-.movie-poster {
-  height: 500px;
-  width: 350px;
+
+.movie_view {
+  height: 100%;
+  width: 100%;
+  background-color: lightseagreen;
+  display: flex;
+  flex-direction: row;
 }
 
-.value {
-  color: white;
+.movie_view_poster {
+  height: 100%;
+  width: 30%;
+}
+
+.movie_body {
+  position: relative;
 }
 
 .label {
@@ -29,11 +38,26 @@
   display: flex;
   justify-content: center;
   text-shadow: 3px 3px blue;
+  font-family: retro;
+}
+
+.view_link {
+  font-size: 20px;
+  font-weight: 600;
+  color: darkmagenta;
 }
 
 .back_button {
   color: black;
   font-family: retro;
+}
+
+.movie-title {
+  font-size: 45px;
+}
+
+.fav-button {
+  background-color: darkmagenta
 }
 
 .homescreen_click {
@@ -42,6 +66,7 @@
   background-color: yellow;
   display: flex;
   justify-content: center;
+  margin: 30px
 }
 
 .centerbutton {
@@ -49,6 +74,7 @@
   justify-content: center;
   font-family: retro;
 }
+
 
 .retro_solid {
   font-family: retro_solid;

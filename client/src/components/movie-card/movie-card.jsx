@@ -44,21 +44,20 @@ export class MovieCard extends React.Component {
 
 
     return (
-      <div className="card">
-
-        <Card className="back_card">
-          <Card className="card_style" style={{ width: '16rem' }}>
-            <Card.Img variant="top" src={movie.ImagePath} />
-            <Card.Body className='text-center'>
-              {/* <Card.Title>{movie.Title}</Card.Title> */}
-              {/* <Card.Text>{movie.Description}</Card.Text> */}
-              <Link to={`/movies/${movie._id}`}>
-                <Button className="title_click retro_solid" variant="link">{movie.Title}</Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Card>
-      </div>
+      // <div className="card">
+      // <Card className="back_card">
+      <Card className="card_style" style={{ width: '16rem' }}>
+        <Card.Img variant="top" className="movie_poster" src={movie.ImagePath} />
+        <Card.Body className='text-center'>
+          {/* <Card.Title>{movie.Title}</Card.Title> */}
+          {/* <Card.Text>{movie.Description}</Card.Text> */}
+          <Link to={`/movies/${movie._id}`}>
+            <Button className="title_click retro_solid" variant="link">{movie.Title}</Button>
+          </Link>
+        </Card.Body>
+      </Card>
+      // </Card>
+      // </div>
     )
   }
 

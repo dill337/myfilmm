@@ -13,9 +13,11 @@
 }
  
 .card_style {
-  border-color: darkblue;
-  margin: 5px;
+  border-color: yellow;
+  border-width: 8px;
+  // margin: 5px;
   background-color: lightseagreen;
+
 }
 
 .title_click {
@@ -23,10 +25,15 @@
   font-size: large;
 }
 
-.back_card {
-  background-color: yellow
-}
+// .back_card {
+//   background-color: yellow;
+//   padding: 1px
+// }
 
 .card {
-  flex-direction: column;
+  // flex-direction: column;
+  height: 500px;
+  // padding: 10px;
+  margin: 10px
 }
+

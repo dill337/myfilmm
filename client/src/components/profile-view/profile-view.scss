@@ -1,0 +1,17 @@
+.profile-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pv-username {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pv-fav-movies{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+

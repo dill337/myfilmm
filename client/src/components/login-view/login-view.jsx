@@ -38,7 +38,7 @@ export function LoginView(props) {
 
     <Form className="login-form">
       <Form.Group controlId="formBasicUsername">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Username:</Form.Label>
         <Form.Control
           type="username"
           placeholder="Enter username"

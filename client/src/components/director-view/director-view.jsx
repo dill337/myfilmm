@@ -54,22 +54,27 @@ export class DirectorView extends React.Component {
     return (
       <div className="director-view">
         <div className="director-name">
-          <span className="label">{director.Name} </span>
+          <span className="label">{director.Name}</span>
         </div>
+        <div className="director-birth">
+          <span className="birthday_font"> {director.Birth} - </span>
+          {/* </div>
+        <div className="director-death"> */}
+          <span className="birthday_font">{director.Death}</span>
+        </div>
+        <br />
         <div className="director-description">
-          <span className="value">{director.Description}</span>
+          <span className="bio_font">{director.Bio}</span>
         </div>
-        <div className="director-movies">
+        {/* <div className="director-movies">
           <span className="value">{director.Movies}</span>
-        </div>
+        </div> */}
         <br />
         <br />
         <div className="centerbutton">
           {
             this.filterMovies().map((movie, index) => {
               return <MovieCard key={movie._id} movie={movie} />
-              //<Link key={`${movie.Title}-${index}`} to={`/movies/${movie._id}`}>
-              // </Link>
             })
           }
         </div>

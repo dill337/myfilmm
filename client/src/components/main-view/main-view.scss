@@ -9,19 +9,35 @@
 }
 
 .movie-container {
-  display: flex;
+  // display: flex;
   // flex-wrap: wrap;
   background-color: darkmagenta;
-  justify-content: center;
+  height: 100vh,
+  min-height 100vh
+  // justify-content: center;
+  // width: 100%
+}
+
+.profile-header-button {
+  font-family: retro;
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
 }
 
 .main-view {
   display: flex;
 }
 
-.card-view {
-  flex-direction: row;
+.main_header-row {
+  display: flex;
+justify-content: space-around;
+}
 
+.card-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .main_header {

@@ -74,14 +74,11 @@ export class GenreView extends React.Component {
           <span className="label">{genre.Name} </span>
         </div>
         <div className="genre-description">
-          <span className="value">{genre.Description}</span>
-        </div>
-        <div className="genre-movies">
-          <span className="value">{genre.Movies}</span>
+          <span className="bio_font ">{genre.Description}</span>
         </div>
         <br />
         <br />
-        <div className="centerbutton">
+        <div className="render_movies">
           {
             this.filterMovies().map((movie, index) => {
               return <Link key={`${movie.Title}-${index}`} to={`/movies/${movie._id}`}>
@@ -98,7 +95,7 @@ export class GenreView extends React.Component {
             <Button className="homescreen_click" variant="link">Home Page</Button>
           </Link>
         </div>
-      </div>
+      </div >
     )
   }
 }

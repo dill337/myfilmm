@@ -40,6 +40,22 @@ export class MovieView extends React.Component {
       })
   }
 
+  addToFavorites(MovieID) {
+    const token = localStorage.getItem('token')
+    const username = localStorage.getItem('user')
+    console.log('movie added');
+    axios.post(`https://myfilmm.herokuapp.com/users/${username}/Movies/${MovieID}`, {}, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        this.props.reloadUser()
+        alert('Added to Favorites')
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   getDirectors(token) {
     axios.get('https://myfilmm.herokuapp.com/directors', {
       headers: { Authorization: `Bearer ${token}` }
@@ -86,31 +102,32 @@ export class MovieView extends React.Component {
     return (
       <Container>
         <div>
-          <Card className="card_style" style={{ width: '25rem' }}>
-            <Card.Img variant="top" src={movie.ImagePath} />
-            <Card.Body className='text-center'>
-              <Card.Title className="label retro_solid">{movie.Title}</Card.Title>
-              <Card.Text>{movie.Description}</Card.Text>
+          <Card className="movie_view">
+            <Card.Img className="movie_view_poster" variant="top" src={movie.ImagePath} />
+            <Card.Body className='text-center movie_body'>
+              <Card.Title className="label retro_solid movie-title">{movie.Title}</Card.Title>
+              <Button className="fav-button retro_solid" onClick={() => this.addToFavorites(movie._id)}>Add to Favorites</Button>
               <br />
+              <br />
+              <Card.Text>{movie.Description}</Card.Text>
               <br />
               <div>
                 <h5 className="retro_solid">Genre</h5>
                 {
                   this.filterGenres().map((genre, index) => {
                     return <Link key={`${genre.Name}-${index}`} to={`/genres/${genre._id}`}>
-                      <Button variant="link">{genre.Name}</Button>
+                      <Button className="view_link retro_solid" variant="link">{genre.Name}</Button>
                     </Link>
                   })
                 }
               </div>
-              <br />
               <br />
               <div>
                 <h5 className="retro_solid">Director</h5>
                 {
                   this.filterDirectors().map((director, index) => {
                     return <Link key={`${director.Name}-${index}`} to={`/directors/${director._id}`}>
-                      <Button variant="link">{director.Name}</Button>
+                      <Button className="view_link retro_solid" variant="link">{director.Name}</Button>
                     </Link>
                   })
                 }

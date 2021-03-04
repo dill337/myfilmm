@@ -29,8 +29,26 @@
   font-family: retro_solid;
 }
 
+.director-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .centerbutton {
   display: flex;
   justify-content: center;
   font-family: retro;
+}
+
+.bio_font {
+  color: white;
+  text-align: center;
+}
+.birthday_font {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
