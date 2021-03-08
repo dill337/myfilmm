@@ -205,7 +205,7 @@ class MainView extends React.Component {
     return (
       <div className="movie-container">
         <Container>
-          <Router>
+          <Router basename="/client">
             <div className="main_header-container">
               <div className="header-background">
 
