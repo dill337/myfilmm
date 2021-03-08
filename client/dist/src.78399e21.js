@@ -54420,7 +54420,7 @@ function RegistrationView(props) {
       var data = response.data;
       console.log(data);
       alert('User added');
-      window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
+      window.open("/client", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
     }).catch(function (e) {
       console.log("error registering the user");
     });
@@ -55805,7 +55805,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60409" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50913" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
