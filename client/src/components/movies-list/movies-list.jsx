@@ -18,20 +18,43 @@ function MoviesList(props) {
   let filteredMovies = movies;
   let filteredGenres = genres;
   let filteredDirectors = directors;
+  console.log(props)
 
   if (visibilityFilter !== '') {
-    filteredMovies = movies.filter(m => m.Title.toLowerCase().includes(visibilityFilter.toLowerCase()));
-    filteredGenres = genres.filter(m => m.Genre.Name.toLowerCase().includes(visibilityFilter.toLowerCase()));
-    filteredDirectors = directors.filter(m => m.Name.toLowerCase().includes(visibilityFilter.toLowerCase()));
+    const filterGenres = genres.filter(g => g.Name.toLowerCase().includes(visibilityFilter.toLowerCase()))
+    const filterDirectors = directors.filter(d => d.Name.toLowerCase().includes(visibilityFilter.toLowerCase()))
+    const genreMovieIds = []
+    const directorMovieIds = []
+    filterGenres.forEach((genre) => {
+      genre.GenreMovies.forEach((id) => {
+        genreMovieIds.push(id)
+      })
+    })
+    filterDirectors.forEach((director) => {
+      director.DirectedMovies.forEach((id) => {
+        directorMovieIds.push(id)
+      })
+    })
+    filteredMovies = movies.filter(m => {
+
+      return m.Title.toLowerCase().includes(visibilityFilter.toLowerCase())
+        || genreMovieIds.includes(m._id)
+        || directorMovieIds.includes(m._id)
+      // || m.Director.Name.toLowerCase().includes(visibilityFilter.toLowerCase())
+    });
+    // filteredGenres = movies.filter(m => );
+    // filteredDirectors = directors.filter(m => );
   }
 
   if (!movies) return <div className="main-view" />
 
-  return <div className="movies-list">
+  return <div>
     <VisibilityFilterInput visibilityFilter={visibilityFilter} />
-    {filteredMovies.map(m => <MovieCard key={m._id} movie={m} />)};
-    {filteredGenres.map(m => <GenreView key={m._id} genre={m} />)};
-    {filteredDirectors.map(m => <DirectorView key={m._id} director={m} />)};
+    <div className="movies-list">
+      {filteredMovies.map(m => <MovieCard key={m._id} movie={m} />)};
+     </div>
+    {/* {filteredGenres.map(m => <MovieCard key={m._id} genre={m} />)}; */}
+    {/* {filteredDirectors.map(m => <DirectorView key={m._id} director={m} />)}; */}
   </div>
 }
 

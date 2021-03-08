@@ -19,10 +19,14 @@
 }
 
 .profile-header-button {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
   font-family: retro;
   font-size: 30px;
   background-color: transparent;
   color: white;
+  top: 10px
 }
 
 .main-view {
@@ -30,8 +34,25 @@
 }
 
 .main_header-row {
-  display: flex;
-justify-content: space-around;
+justify-content: space-between;
+position: fixed;
+z-index: 1;
+background-color: darkmagenta;
+width: 80%;
+}
+
+.main_header-container{
+  background: darkmagenta;
+  display: block;
+  position: relative;
+  z-index: 3;
+  height: 150px;
+}
+
+.header-background {
+  position: fixed;
+  color: darkmagenta;
+  height: 100px;
 }
 
 .card-view {

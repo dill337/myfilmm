@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+
+
+import { RegistrationView } from '../registration-view/registration-view';
+
 
 import './login-view.scss'
 
@@ -38,7 +43,7 @@ export function LoginView(props) {
 
     <Form className="login-form">
       <Form.Group controlId="formBasicUsername">
-        <Form.Label>Username:</Form.Label>
+        <Form.Label className="label">Username</Form.Label>
         <Form.Control
           type="username"
           placeholder="Enter username"
@@ -47,7 +52,7 @@ export function LoginView(props) {
         />
       </Form.Group>
       <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className="label">Password</Form.Label>
         <Form.Control
           type="password"
           placeholder="Enter Password"
@@ -56,12 +61,18 @@ export function LoginView(props) {
         />
       </Form.Group>
       <Button
+        className="new-user"
         variant="btn-lg btn-dark btn-block"
         type="submit"
         onClick={handleSubmit}
       >
         Login
     </Button>
+      <br />
+      <Link to={`/register`}>
+        <Button variant="link" className="new-user">New User</Button>
+        {/* <Button variant="link" type="button" onClick={props.onRegisterClick}>New User</Button> */}
+      </Link>
     </Form>
 
     // <div className="login_style">

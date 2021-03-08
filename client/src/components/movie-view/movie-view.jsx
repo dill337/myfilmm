@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, Button, Container } from 'react-bootstrap';
 import axios from 'axios';
 import { Spring } from 'react-spring';
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 import './movie-view.scss'
 
 export class MovieView extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       genres: [],
-      directors: []
+      directors: [],
     };
   }
+
 
   componentDidMount() {
     const token = localStorage.getItem('token')
@@ -24,6 +25,7 @@ export class MovieView extends React.Component {
     this.getGenres(token)
     this.getDirectors(token)
   }
+
 
   getGenres(token) {
     axios.get('https://myfilmm.herokuapp.com/genres', {
@@ -89,8 +91,6 @@ export class MovieView extends React.Component {
 
   render() {
     const { movie, onClick, genre, director } = this.props;
-    console.log(this.state.genres)
-    console.log(this.state.directors)
 
     if (!movie) return null;
 

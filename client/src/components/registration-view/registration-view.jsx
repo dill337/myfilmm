@@ -4,6 +4,8 @@ import "./registration-view.scss";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
 
 export function RegistrationView(props) {
   const [username, createUsername] = useState("");
@@ -13,17 +15,17 @@ export function RegistrationView(props) {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    axios
-      .post("https://myflixdb-api.herokuapp.com/users", {
-        Username: username,
-        Password: password,
-        Email: email,
-        Birthday: birthday
-      })
+    axios.post("https://myfilmm.herokuapp.com/users", {
+      Username: username,
+      Password: password,
+      Email: email,
+      Birthday: birthday
+    })
       .then((response) => {
         const data = response.data;
         console.log(data);
-        window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
+        alert('User added')
+        window.open("/client", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
       })
       .catch((e) => {
         console.log("error registering the user");
@@ -64,10 +66,21 @@ export function RegistrationView(props) {
           onChange={(e) => createBirthday(e.target.value)}
         />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleRegister}>
+      <Button
+        className="new-user"
+        variant="primary"
+        type="submit"
+        onClick={handleRegister}>
         Register
       </Button>
+      <br />
+      <br />
+      <Link to={`/`}>
+        <Button variant="link" className="new-user">Go Back</Button>
+        {/* <Button variant="link" type="button" onClick={props.onRegisterClick}>New User</Button> */}
+      </Link>
     </Form>
+
   );
 }
 

@@ -70,6 +70,11 @@ export class GenreView extends React.Component {
 
     return (
       <div className="genre-view">
+        <div className="centerbutton">
+          <Link to={`/`}>
+            <Button className="homescreen_click" variant="link">Home Page</Button>
+          </Link>
+        </div>
         <div className="genre-name">
           <span className="label">{genre.Name} </span>
         </div>

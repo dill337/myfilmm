@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { setMovies } from '../../actions/actions';
+import { setGenres } from '../../actions/actions';
+import { setDirectors } from '../../actions/actions';
 
 import MoviesList from '../movies-list/movies-list';
 import { LoginView } from '../login-view/login-view';
@@ -31,6 +33,7 @@ class MainView extends React.Component {
     //call the superclass constructor so react can initialize it
     super();
 
+
     //initialize the stae to an empty object so we can destructure it laterr 
     this.state = {
       movies: [],
@@ -42,6 +45,8 @@ class MainView extends React.Component {
       directorMovies: [],
     };
   }
+
+
 
   //one fo the "hooks" availabe in a react component 
   componentDidMount() {
@@ -130,6 +135,8 @@ class MainView extends React.Component {
       .then(response => {
 
         this.props.setMovies(response.data)
+        // 
+        // 
         //passing the result to the state
         // this.setState({
         //   movies: response.data
@@ -146,9 +153,7 @@ class MainView extends React.Component {
     })
       .then(response => {
         //assing the result to the state
-        this.setState({
-          genres: response.data
-        });
+        this.props.setGenres(response.data)
       })
       .catch(function (error) {
         console.log(error);
@@ -161,9 +166,7 @@ class MainView extends React.Component {
     })
       .then(response => {
         //assing the result to the state
-        this.setState({
-          directors: response.data
-        });
+        this.props.setDirectors(response.data)
       })
       .catch(function (error) {
         console.log(error);
@@ -187,9 +190,9 @@ class MainView extends React.Component {
 
   render() {
     //if the state isnt initialized, it will throw on runtime before data is loaded
-    const { /* movies */ selectedMovie, /*user,*/ genres, directors } = this.state;
+    const { /* movies */ selectedMovie, /*user,*/ } = this.state;
 
-    let { movies } = this.props;
+    let { movies, genres, directors } = this.props;
     let { user } = this.state;
 
     // if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
@@ -203,23 +206,28 @@ class MainView extends React.Component {
       <div className="movie-container">
         <Container>
           <Router>
-            <Row className="main_header-row">
-              <h1 className="main_header">MyFilmm</h1>
+            <div className="main_header-container">
+              <div className="header-background">
+
+              </div>
+              <Row className="main_header-row">
+                <h1 className="main_header">MyFilmm</h1>
 
 
-              {
-                user && <Link to={'/profile'}> <Button className="profile-header-button" variant="link">My Profile</Button> </Link>
+                {
+                  user && <Link to={'/profile'}> <Button className="profile-header-button" variant="link">My Profile</Button> </Link>
 
-              }
-              {
-                user && <Button onClick={() => this.onLogOut()} className="profile-header-button" variant="link">Log Out
+                }
+                {
+                  user && <Button onClick={() => this.onLogOut()} className="profile-header-button" variant="link">Log Out
               </Button>
-              }
-            </Row>
+                }
+              </Row>
+            </div>
             <div className='main-view'>
               <Route exact path="/" render={() => {
                 if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-                return <MoviesList movies={movies} />;
+                return <MoviesList movies={movies} genres={genres} directors={directors} />;
                 // return <div className="card-view">
 
                 // { movies.map(m => <MovieCard key={m._id} movie={m} />) } </div>
@@ -273,10 +281,10 @@ class MainView extends React.Component {
 }
 
 let mapStateToProps = state => {
-  return { movies: state.movies }
+  return { movies: state.movies, genres: state.genres, directors: state.directors }
 }
 
-export default connect(mapStateToProps, { setMovies })(MainView)
+export default connect(mapStateToProps, { setMovies, setGenres, setDirectors })(MainView)
 
 
 

@@ -9,6 +9,14 @@
   display: flex;
   flex-wrap: wrap; }
 
+.filter-bar {
+  display: absolute;
+  position: fixed;
+  z-index: 4;
+  width: 1100px;
+  top: 90px;
+  padding-bottom: 10px; }
+
 @font-face {
   src: url(/SFAlienEncounters-Italic.730c5153.ttf);
   font-family: retro; }
@@ -27,10 +35,11 @@
 
 .title_click {
   color: black;
-  font-size: large; }
+  font-size: large;
+  align-items: center; }
 
 .card {
-  height: 500px;
+  height: 550px;
   margin: 10px; }
 
 @font-face {
@@ -44,7 +53,8 @@
 .director-view {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%; }
 
 .centerbutton {
   display: flex;
@@ -53,7 +63,9 @@
 
 .bio_font {
   color: white;
-  text-align: center; }
+  text-align: center;
+  justify-content: center;
+  width: 100%; }
 
 .birthday_font {
   color: white;
@@ -91,6 +103,18 @@
 .login_style {
   background-color: darkmagenta; }
 
+.new-user {
+  background-color: steelblue;
+  box-shadow: 3px 3px blue;
+  font-family: retro;
+  width: 400px;
+  color: white; }
+
+.new-user:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white; }
+
 @font-face {
   src: url(/SFAlienEncounters-Italic.730c5153.ttf);
   font-family: retro; }
@@ -104,7 +128,9 @@
   width: 100%;
   background-color: lightseagreen;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  border-width: 8px;
+  border-color: yellow; }
 
 .movie_view_poster {
   height: 100%;
@@ -156,18 +182,40 @@
 .profile-view {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%; }
 
 .pv-username {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: space-around; }
 
 .pv-fav-movies {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: center; }
+
+.remove-button {
+  border: none;
+  width: 100%; }
+
+.remove-button:hover {
+  background-color: steelblue;
+  font-size-adjust: 20px;
+  color: white;
+  box-shadow: 3px 3px blue; }
+
+.info {
+  display: inline;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+.profile-form {
+  color: lightseagreen;
+  font-family: retro;
+  text-shadow: 3px 3px blue; }
 
 @font-face {
   src: url(/SFAlienEncounters-Italic.730c5153.ttf);
@@ -182,17 +230,36 @@
   height: 100vh, min-height 100vh; }
 
 .profile-header-button {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
   font-family: retro;
   font-size: 30px;
   background-color: transparent;
-  color: white; }
+  color: white;
+  top: 10px; }
 
 .main-view {
   display: flex; }
 
 .main_header-row {
-  display: flex;
-  justify-content: space-around; }
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  background-color: darkmagenta;
+  width: 80%; }
+
+.main_header-container {
+  background: darkmagenta;
+  display: block;
+  position: relative;
+  z-index: 3;
+  height: 150px; }
+
+.header-background {
+  position: fixed;
+  color: darkmagenta;
+  height: 100px; }
 
 .card-view {
   display: flex;
@@ -215,7 +282,8 @@
 
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background-color: darkmagenta; }
 
 
 /*# sourceMappingURL=/src.78399e21.css.map */

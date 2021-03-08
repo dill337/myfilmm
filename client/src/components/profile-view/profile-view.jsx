@@ -103,21 +103,30 @@ export class ProfileView extends React.Component {
     }
     return (
       <div className="profile-view">
-        <div className="pv-username">
-          <h2 className="retro_solid">{Username}</h2>
-          <br />
-          <br />
-          {Email}
-          <br />
-          <br />
-          DOB  {new Date(Birthday).toDateString()}
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+        <div className="centerbutton">
+          <Link to={`/`}>
+            <Button className="homescreen_click" variant="link">Home Page</Button>
+          </Link>
         </div>
-        <h2 className="retro_solid">Favorite Movies</h2>
+        <br />
+        <br />
+        <div className="pv-username">
+          <h1 className="retro_solid profile-form">{Username}</h1>
+          {/* <br /> */}
+          <h4 className="retro_solid profile-form">Email:  <span className="info">{Email} </span></h4>
+          {/* <br /> */}
+          {/* <br /> */}
+          <h4 className="retro_solid profile-form">Birthday:   <span className="info">{new Date(Birthday).toDateString()}</span></h4>
+          {/* <br /> */}
+          {/* <br /> */}
+          {/* <br /> */}
+          {/* <br /> */}
+          {/* <br /> */}
+        </div>
+        <br />
+        <br />
+        <br />
+        <h2 className="retro_solid profile-form">Favorite Movies</h2>
 
         <div className="pv-fav-movies">
           <br />
@@ -125,7 +134,7 @@ export class ProfileView extends React.Component {
           {
             this.filterMovies().map((movie, index) => {
               return <div><MovieCard key={movie._id} movie={movie} />
-                <Button className="fav-button retro_solid" onClick={() => this.removeFromFavorites(movie._id)}>Remove</Button>
+                <Button className="fav-button retro_solid remove-button" onClick={() => this.removeFromFavorites(movie._id)}>Remove</Button>
 
               </div>
 
