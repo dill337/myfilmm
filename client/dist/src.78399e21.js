@@ -55496,14 +55496,14 @@ var MainView = /*#__PURE__*/function (_React$Component) {
 
       return _react.default.createElement("div", {
         className: "movie-container"
-      }, _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement("div", {
-        className: "main_header-container"
+      }, _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactRouterDom.BrowserRouter, {
+        basename: "/client"
       }, _react.default.createElement("div", {
-        className: "header-background"
-      }), _react.default.createElement(_reactBootstrap.Row, {
+        className: "main_header-container"
+      }, _react.default.createElement(_reactBootstrap.Row, {
         className: "main_header-row"
       }, _react.default.createElement("h1", {
-        className: "main_header"
+        className: "main_header profile-header-button"
       }, "MyFilmm"), user && _react.default.createElement(_reactRouterDom.Link, {
         to: '/profile'
       }, " ", _react.default.createElement(_reactBootstrap.Button, {
@@ -55805,7 +55805,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50913" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55028" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
