@@ -54691,23 +54691,7 @@ function LoginView(props) {
   }, _react.default.createElement(_reactBootstrap.Button, {
     variant: "link",
     className: "new-user"
-  }, "New User"))) // <div className="login_style">
-  //   <div>
-  //     <form>
-  //       <label>
-  //         Username:
-  //     <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-  //       </label>
-  //       <label>
-  //         Password:
-  //     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-  //       </label>
-  //       <button type="button" onClick={handleSubmit}>Login</button>
-  //       <button type="button">Sign Up</button>
-  //     </form>
-  //   </div>
-  // </div>
-  ;
+  }, "New User")));
 }
 },{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../registration-view/registration-view":"components/registration-view/registration-view.jsx","./login-view.scss":"components/login-view/login-view.scss"}],"components/movie-view/movie-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -55329,7 +55313,7 @@ var MainView = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       movies: [],
       selectedMovie: null,
-      user: null,
+      user: true,
       registered: null,
       genres: [],
       genreMovies: [],
@@ -55805,7 +55789,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55028" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62016" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

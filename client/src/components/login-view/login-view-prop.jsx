@@ -9,7 +9,7 @@ import { RegistrationView } from '../registration-view/registration-view';
 
 import './login-view.scss'
 
-export function LoginView(props) {
+function LoginView(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,17 +27,6 @@ export function LoginView(props) {
         console.log('no such user');
       });
   }
-
-
-  //   console.log(username, password);
-  //   //sends a request to the server for authentication, 
-  //   // then call props.onLoggedIn(username)
-  //   props.onLoggedIn(username);
-  // };
-
-
-
-
 
   return (
 
@@ -77,3 +66,8 @@ export function LoginView(props) {
 
   );
 }
+
+export default connect(
+  null,
+
+)(LoginView)
