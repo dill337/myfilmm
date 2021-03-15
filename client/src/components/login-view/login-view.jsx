@@ -75,5 +75,21 @@ export function LoginView(props) {
       </Link>
     </Form>
 
+    // <div className="login_style">
+    //   <div>
+    //     <form>
+    //       <label>
+    //         Username:
+    //     <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+    //       </label>
+    //       <label>
+    //         Password:
+    //     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+    //       </label>
+    //       <button type="button" onClick={handleSubmit}>Login</button>
+    //       <button type="button">Sign Up</button>
+    //     </form>
+    //   </div>
+    // </div>
   );
 }

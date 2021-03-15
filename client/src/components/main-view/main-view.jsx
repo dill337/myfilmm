@@ -38,7 +38,7 @@ class MainView extends React.Component {
     this.state = {
       movies: [],
       selectedMovie: null,
-      user: true,
+      user: null,
       registered: null,
       genres: [],
       genreMovies: [],
